@@ -1,0 +1,40 @@
+/* Style all paragraphs with at least two rules */
+p {
+    color: MediumSeaGreen;
+    font-size: 16px
+}
+
+/* Style all level two headers with at least two rules */
+h2 {
+    color: DodgerBlue;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+/* Style all tables to include a border with a border color */
+table {
+    border-style: solid;
+    border-width: 2px;
+    border-collapse: collapse
+}
+
+/* Create a CSS paragraph selector using this id and include at least two rules */
+p#special-one {
+    color: SlateBlue;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Create a new CSS rule block based off a class attribute that includes at least
+one rule*/
+.tomato {
+    color: Tomato;
+    font-style: italic;
+}
+
+/* Create a new, named CSS rule block that contains width and height attributes,
+but only for img tags  */
+.logo {
+    width: 267px;
+    height: 72px;
+}
