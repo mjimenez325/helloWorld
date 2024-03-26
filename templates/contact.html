@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Contact Us</h1>
+    {% if submitted %}
+        <div class="alert alert-success" role="alert">
+            Thank you for your submission, {{ first_name }} {{ last_name }}!
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">Email: {{ email }}</p>
+                <p class="card-text">Birthday: {{ birthday }}</p>
+            </div>
+        </div>
+    {% else %}
+        <form method="post">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name">
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="birthday" class="form-label">Birthday</label>
+                <input type="date" class="form-control" id="birthday" name="birthday">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
