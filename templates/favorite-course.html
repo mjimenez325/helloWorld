@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Course</title>
+</head>
+<body>
+    <h1>Your Favorite Course</h1>
+    {% if subject and course_number %}
+        <p>You entered your favorite course as: {{ subject }} {{ course_number }}</p>
+    {% else %}
+        <p>No favorite course specified.</p>
+    {% endif %}
+</body>
+</html>
